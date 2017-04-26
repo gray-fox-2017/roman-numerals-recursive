@@ -1,8 +1,31 @@
-function to_roman(input) {
-  // start your code here
-  return to_roman(input); 
-}
+function to_roman(input, romanOut = "") {
+  romanNum = {
+    M: 1000,
+    CM: 900,
+    D: 500,
+    CD: 400,
+    C: 100,
+    XC: 90,
+    L: 50,
+    XL: 40,
+    X: 10,
+    IX: 9,
+    V: 5,
+    IV: 4,
+    I: 1
+  }
 
+  for (i in romanNum) {
+    if (input === romanNum[i]) {
+      romanOut += i;
+      return romanOut;
+    }
+    else if (input > romanNum[i]) {
+      romanOut += i;
+      return to_roman(input-romanNum[i], romanOut);
+    }
+  }
+}
 console.log('My totally sweet testing script for new roman\n')
 console.log('input | expected | actual')
 console.log('——————|——————————|————————')
