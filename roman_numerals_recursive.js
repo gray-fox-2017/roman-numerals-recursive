@@ -8,7 +8,7 @@ function to_roman(input) {
             return "CM" + to_roman(input-=900);
         }
         else if(input >=500){
-            return "D" + to_roman(input-=500,"D");
+            return "D" + to_roman(input-=500);
         }
         else if(input >=400){
             return "CD"+to_roman(input -= 400);
@@ -43,7 +43,6 @@ function to_roman(input) {
         else if(input == 0){
             input = 0;
             return "";
-            break;
         }
     }
 }
