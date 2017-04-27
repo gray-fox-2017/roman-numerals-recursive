@@ -5,12 +5,16 @@ function to_roman(input) {
   } else {
     if (input >= 1000) {
       return "M" + to_roman(input - 1000);
+    } else if (input >= 900) {
+      return "CM" + to_roman(input - 900);
     } else if (input >= 500) {
       return "D" + to_roman(input - 500);
     } else if (input >= 400) {
       return "CD" + to_roman(input - 400);
     } else if (input >= 100) {
       return "C" + to_roman(input - 100);
+    } else if (input >= 90) {
+      return "XC" + to_roman(input - 90);
     } else if (input >= 50) {
       return "L" + to_roman(input - 50);
     } else if (input >= 40) {
