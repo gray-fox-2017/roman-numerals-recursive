@@ -1,6 +1,6 @@
 function to_roman(input) {
     // start your code here
-    while(input < 3000){
+    while(input <= 3000){
         if(input >=1000){
            return "M" + to_roman(input-=1000);
         }
@@ -50,7 +50,7 @@ function to_roman(input) {
 console.log('My totally sweet testing script for new roman\n')
 console.log('input | expected | actual')
 console.log('——————|——————————|————————')
-console.log('4     | IV       | ', to_roman(4))
+console.log('4     | IV       | ', to_roman(2101))
 console.log('9     | IX       | ', to_roman(9))
 console.log('13    | XIII     | ', to_roman(13))
 console.log('1453  | MCDLIII  | ', to_roman(1453))
